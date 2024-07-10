@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Order ID</th>
+                <th>Query Type</th>
+                <th>Query Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% queries.forEach(query => { %>
+                <tr>
+                    <td><%= query.name %></td>
+                    <td><%= query.email %></td>
+                    <td><%= query.phone %></td>
+                    <td><%= query.orderId %></td>
+                    <td><%= query.queryType %></td>
+                    <td><%= query.queryDescription %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
